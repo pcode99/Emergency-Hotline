@@ -29,10 +29,13 @@ for(const cbtnF of calBtnF){
 
         alert(`${titleAlert} :  ${callingNum}`);
         coin = document.getElementById('coin').innerText=coin-20
-        return
+        return coin;
         }
-        else {
-            alert('You must be need 20 coin')
+        else if (coin<19){
+            alert('You dont have Proper coin for cal')
+        }
+        else{
+            alert('els')
         }
      
         
@@ -40,3 +43,6 @@ for(const cbtnF of calBtnF){
     })
 }
 
+ if (coin=>20){
+    
+ }
