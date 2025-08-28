@@ -12,37 +12,72 @@ for (const heart of heartI){
 }
 
 
-let coin =parseInt(document.getElementById('coin').innerText)
+// let coin =parseInt(document.getElementById('coin').innerText)
+// // coin functional
+
+// const calBtnF = document.getElementsByClassName('btn-call');
+
+
+// for(const cbtnF of calBtnF){
+//     cbtnF.addEventListener('click', function (){
+
+//         if (coin=>20){
+              
+//         const titleAlert =cbtnF.parentNode.parentNode.children[1].innerText;
+//         const conTitleAlert=parseInt(titleAlert)
+//         const callingNum =cbtnF.parentNode.parentNode.children[3].innerText;
+
+//         alert(`${titleAlert} :  ${callingNum}`);
+//         coin = document.getElementById('coin').innerText=coin-20
+//         return coin;
+//         }
+//         else if (coin<19){
+//             alert('You dont have Proper coin for cal')
+//         }
+//         else{
+//             alert('els')
+//         }
+     
+        
+//         // console.log(titleAlert,callingNum)
+//     })
+// }
+
+//  if (coin=>20){
+    
+//  }
+
+
+
+ let coin = parseInt(document.getElementById('coin').innerText);
 // coin functional
 
 const calBtnF = document.getElementsByClassName('btn-call');
 
-
-for(const cbtnF of calBtnF){
-    cbtnF.addEventListener('click', function (){
-
-        if (coin=>20){
-              
-        const titleAlert =cbtnF.parentNode.parentNode.children[1].innerText;
-        const conTitleAlert=parseInt(titleAlert)
-        const callingNum =cbtnF.parentNode.parentNode.children[3].innerText;
-
-        alert(`${titleAlert} :  ${callingNum}`);
-        coin = document.getElementById('coin').innerText=coin-20
-        return coin;
-        }
-        else if (coin<19){
-            alert('You dont have Proper coin for cal')
-        }
-        else{
-            alert('els')
-        }
-     
+for (const cbtnF of calBtnF) {
+    cbtnF.addEventListener('click', function () {
         
-        // console.log(titleAlert,callingNum)
+        if (coin >= 20) {
+            const titleAlert = cbtnF.parentNode.parentNode.children[1].innerText;
+            const callingNum = cbtnF.parentNode.parentNode.children[3].innerText;
+
+            alert(`${titleAlert} : ${callingNum}`);
+
+            coin = coin - 20;
+            document.getElementById('coin').innerText = coin;
+
+    
+            if (coin <= 0) {
+                coin = 0;
+                document.getElementById('coin').innerText = coin;
+                // alert("Your coin is finished!");
+            }
+
+            return coin;
+        } 
+        else {
+            alert('You don’t have enough coin for call');
+        }
     })
 }
 
- if (coin=>20){
-    
- }
